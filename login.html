@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        background-color: aqua;
+        position: absolute;
+left: 50%;
+top: 30%;
+transform: translate(-50%, -50%);
+padding: 10px;
+        
+    }
+    h1{
+        text-align: center;
+    }
+    button {
+        padding: 10px;
+    }
+</style>
+<body>
+    <h1>login</h1>
+
+    <form>
+        <label>Email</label><br><br>
+        <input type="text" id="email"><br><br>
+
+        <label>Password</label><br><br>
+        <input type="password" id="pass"><br><br>
+
+        <button onclick="login()">Login</button>
+        or
+        <button>  <a href="./index.html">Create account </a></button>
+    </form>
+<script>
+    function login(){
+        var email=document.getElementById("email").value;
+        var pass=document.getElementById("pass").value;
+
+
+        var email1=localStorage.getItem("email1");
+        var pass1=localStorage.getItem("pass1");
+
+        if(email==email1 && pass==pass1){
+          
+            window.open('home.html');
+        }else{
+            alert("email and password is wrong ")
+        }
+
+    }
+
+</script>
+</body>
+</html>
